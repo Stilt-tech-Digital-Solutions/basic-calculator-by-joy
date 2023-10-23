@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator - Light/Dark Mode</title>
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="page-wrapper dark-mode" id="page-wrapper">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div
+          class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center"
+        >
+          <div class="card glass-panel">
+            <div class="card-body">
+              <form name="calculator">
+                <div class="glass-panel mb-2">
+                  <input
+                    class="display-box"
+                    id="display-box"
+                    name="displaybox1"
+                    type="text"
+                    disabled=""
+                  />
+                  <input
+                    class="display-box"
+                    id="display-box2"
+                    name="displaybox2"
+                    type="text"
+                    value=""
+                    disabled=""
+                  />
+                </div>
+                <div class="row" style="width: 100%">
+                  <div class="col-9">
+                    <div class="col-12 row calc-item mb-2">
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('7')"
+                          >7</a
+                        >
+                      </div>
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('8')"
+                          >8</a
+                        >
+                      </div>
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('9')"
+                          >9</a
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12 row calc-item mb-2">
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('4')"
+                          >4</a
+                        >
+                      </div>
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('5')"
+                          >5</a
+                        >
+                      </div>
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('6')"
+                          >6</a
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12 row calc-item mb-2">
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('1')"
+                          >1</a
+                        >
+                      </div>
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('2')"
+                          >2</a
+                        >
+                      </div>
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('3')"
+                          >3</a
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12 row calc-item mb-2">
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('.')"
+                          >.</a
+                        >
+                      </div>
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          onclick="display('0')"
+                          >0</a
+                        >
+                      </div>
+                      <div class="col-4">
+                        <a
+                          href="#!"
+                          class="glass-panel calc-btn"
+                          id="clr"
+                          onclick="clr();"
+                          >C</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="col-12 row mb-2">
+                      <a
+                        href="#!"
+                        class="glass-panel calc-btn"
+                        id="division"
+                        onclick="division();"
+                        >/
+                      </a>
+                    </div>
+                    <div class="col-12 row mb-2">
+                      <a
+                        href="#!"
+                        class="glass-panel calc-btn"
+                        id="multiplication"
+                        onclick="multiplication();"
+                        >*</a
+                      >
+                    </div>
+                    <div class="col-12 row mb-2">
+                      <a
+                        href="#!"
+                        class="glass-panel calc-btn"
+                        id="subtraction"
+                        onclick="subtraction();"
+                        >-
+                      </a>
+                    </div>
+                    <div class="col-12 row mb-2">
+                      <a
+                        href="#!"
+                        class="glass-panel calc-btn"
+                        id="addition"
+                        onclick="addition();"
+                        >+</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <a
+                      href="#!"
+                      class="glass-panel calc-btn"
+                      id="submit"
+                      onclick="equalsto();"
+                      >=</a
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="control-panel glass-panel p-1 d-flex flex-column justify-content-center align-items-center"
+      >
+        <span>Dark-Mode</span>
+        <div class="form-check form-switch">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="modeSwitch"
+            checked
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/calc.js"></script>
+  </body>
+</html>
